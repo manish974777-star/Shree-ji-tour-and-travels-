@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+
+  <title>श्री जी टूर एण्ड ट्रैवल्स</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(13, 13, 13, 0.95);
+      border-bottom: 1px solid #252525;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span,
+    .hero h1 span,
+    .section-heading h2 span,
+    .contact-box h2 span,
+    .braj-services-heading h2 span,
+    .religious-heading h2 span {
+      color: #f5a623;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      font-size: 15px;
+      color: #cccccc;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #f5a623;
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+
+    /* ================= TOP BANNER ================= */
+
+    .top-banner-section {
+      width: 100%;
+      background: #0d0d0d;
+      padding: 0; 
+      text-align: center;
+    }
+
+    .top-banner-wrapper {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    .top-banner-wrapper img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+
+    /* ================= BRAJ SERVICES SECTION ================= */
+
+    .braj-services {
+      padding: 20px 0; 
+      text-align: center;
+    }
+
+    .braj-services-heading {
+      margin-bottom: 15px; 
+    }
+
+    .braj-services-heading h2 {
+      font-size: clamp(30px, 4vw, 45px);
+    }
+
+    .braj-banner-wrapper {
+      width: min(1120px, 92%);
+      margin: auto;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+
+    .braj-banner-wrapper img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      padding: 0 0 50px 0;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .small-title {
+      color: #f5a623;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 28px;
+    }
+
+    .hero-description {
+      max-width: 540px;
+      color: #b5b5b5;
+      font-size: 17px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 25px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: #f5a623;
+      color: #111111;
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.08);
+    }
+
+    .btn.secondary {
+      border: 1px solid #444;
+      color: #fff;
+    }
+
+    .btn.secondary:hover {
+      border-color: #f5a623;
+      color: #f5a623;
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-wrapper {
+      width: min(480px, 100%);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid #333;
+      background: #181818;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+
+    /* ================= SECTIONS ================= */
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 40px;
+    }
+
+    .section-heading p {
+      color: #f5a623;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(35px, 5vw, 55px);
+      line-height: 1.1;
+    }
+
+
+    /* ================= RELIGIOUS PLACES (16 Boxes) ================= */
+
+    .religious-section {
+      padding: 50px 0;
+      background: #111111;
+    }
+
+    .religious-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .religious-heading h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+    }
+
+    .religious-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .religious-card {
+      background: #181818;
+      border: 1px solid #282828;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .religious-card:hover {
+      transform: translateY(-5px);
+      border-color: #f5a623;
+    }
+
+    .religious-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .religious-card h3 {
+      font-size: 14px;
+      padding: 10px 5px 2px 5px;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .religious-card p {
+      font-size: 12px;
+      color: #999;
+      padding-bottom: 10px;
+    }
+
+
+    /* ================= IMAGE LIGHTBOX / POPUP ================= */
+
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .image-modal-content {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .image-modal-content img {
+      width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 2px solid #f5a623;
+      background: #000;
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      line-height: 1;
+      z-index: 100000;
+    }
+
+    .image-modal-close:hover {
+      color: #f5a623;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .about-card {
+      padding: 35px 30px;
+      background: #151515;
+      border: 1px solid #282828;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-6px);
+      border-color: #f5a623;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #2b2112;
+      color: #f5a623;
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+
+    .about-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .about-card p {
+      color: #999;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services {
+      background: #111111;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 35px;
+      min-height: 230px;
+      border: 1px solid #2b2b2b;
+      border-radius: 15px;
+      background: #161616;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #f5a623;
+    }
+
+    .service-number {
+      color: #f5a623;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #999;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .contact-banner {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+
+    .contact-banner img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .contact-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      padding: 60px;
+      background: #171717;
+      border: 1px solid #2b2b2b;
+      border-radius: 20px;
+    }
+
+    .contact-box h2 {
+      font-size: clamp(35px, 5vw, 60px);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p:not(.small-title) {
+      color: #999;
+      max-width: 550px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+      border-top: 1px solid #252525;
+      padding: 25px 0;
+      color: #777;
+      text-align: center;
+      font-size: 14px;
+    }
+
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 1024px) {
+      .religious-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .hero {
+        padding: 0 0 40px 0;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .about-grid,
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        min-height: 65px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        padding: 15px 4%;
+        background: #101010;
+        border-bottom: 1px solid #292929;
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-menu a {
+        width: 100%;
+        padding: 13px 0;
+        border-bottom: 1px solid #222;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 0 0 45px 0;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .religious-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 35px 25px;
+      }
+
+      .contact-box .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        श्री जी <span>टूर एण्ड ट्रैवल्स</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Top Banner Section -->
+    <section class="top-banner-section">
+      <div class="top-banner-wrapper">
+        <img
+          src="https://i.ibb.co/5X952xFX/file-000000000fc481fa9b3b74ea0160bbaf.png"
+          alt="Shree Ji Exact Top Banner"
+          loading="eager"
+        >
+      </div>
+    </section>
+
+
+    <!-- Hero (Welcome Section) -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+
+        <div class="hero-text">
+          <p class="small-title">WELCOME TO</p>
+
+          <h1>
+            श्री जी
+            <span>टूर एण्ड ट्रैवल्स</span>
+          </h1>
+
+          <p class="hero-description">
+            Quality, trust and excellence — all in one place.
+            Explore our services and discover what makes us different.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#services" class="btn primary">
+              Explore
+            </a>
+
+            <a href="#contact" class="btn secondary">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img
+              src="https://i.ibb.co/G4jFdGqS/braj-darshan-home-banner.png"
+              alt="Shree Ji Exact Banner"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Braj Services Section -->
+    <section class="braj-services">
+      <div class="container braj-services-heading">
+        <h2>ब्रज <span>services</span></h2>
+      </div>
+      <div class="braj-banner-wrapper">
+        <img
+          src="https://i.ibb.co/G43rLDZ3/file-00000000d20c820bb8b897415d547d36.png"
+          alt="Braj Services Banner"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+
+    <!-- ================= LOKPRIYA DHARMIK STHAL (16 Boxes) ================= -->
+    <section class="religious-section">
+      <div class="container">
+        <div class="religious-heading">
+          <h2>लोकप्रिय <span>धार्मिक स्थल</span></h2>
+        </div>
+        <div class="religious-grid">
+
+          <!-- Box 1 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/WpHNzZHL/file-000000009694820b83bc14ed15cbd4b4.png', 'जन्मभूमि')">
+            <img src="https://i.ibb.co/WpHNzZHL/file-000000009694820b83bc14ed15cbd4b4.png" alt="जन्मभूमि" class="religious-img">
+            <h3>जन्मभूमि</h3>
+            <p>मथुरा</p>
+          </div>
+
+          <!-- Box 2 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/XZVbcF8S/file-000000000b2082099f52260232bd04c4.png', 'रमन रेती')">
+            <img src="https://i.ibb.co/XZVbcF8S/file-000000000b2082099f52260232bd04c4.png" alt="रमन रेती" class="religious-img">
+            <h3>रमन रेती</h3>
+            <p>गोकुल</p>
+          </div>
+
+          <!-- Box 3 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/MyTyzr7S/lv-0-20260813110912.jpg', 'द्वारकाधीश मंदिर')">
+            <img src="https://i.ibb.co/MyTyzr7S/lv-0-20260813110912.jpg" alt="द्वारकाधीश मंदिर" class="religious-img">
+            <h3>द्वारकाधीश मंदिर</h3>
+            <p>मथुरा</p>
+          </div>
+
+          <!-- Box 4 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/3Y0nbHGb/Nand-Bhavan-Gokul.webp', 'नंद भवन')">
+            <img src="https://i.ibb.co/3Y0nbHGb/Nand-Bhavan-Gokul.webp" alt="नंद भवन" class="religious-img">
+            <h3>नंद भवन</h3>
+            <p>गोकुल</p>
+          </div>
+
+          <!-- Box 5 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/Vp20nLGQ/Chinta-haran-mahadev.webp', 'चिंताहरण महादेव')">
+            <img src="https://i.ibb.co/Vp20nLGQ/Chinta-haran-mahadev.webp" alt="चिंताहरण महादेव" class="religious-img">
+            <h3>चिंताहरण महादेव</h3>
+            <p>गोकुल</p>
+          </div>
+
+          <!-- Box 6 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/5WjC7ny8/yogmaya2.png', 'योगमाया मंदिर')">
+            <img src="https://i.ibb.co/5WjC7ny8/yogmaya2.png" alt="योगमाया मंदिर" class="religious-img">
+            <h3>योगमाया मंदिर</h3>
+            <p>मथुरा</p>
+          </div>
+
+          <!-- Box 7 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/Hppxy6pC/Krishna-Janam-Bhumi-2.webp', 'बिड़ला मंदिर')">
+            <img src="https://i.ibb.co/Hppxy6pC/Krishna-Janam-Bhumi-2.webp" alt="बिड़ला मंदिर" class="religious-img">
+            <h3>बिड़ला मंदिर</h3>
+            <p>मथुरा</p>
+          </div>
+
+          <!-- Box 8 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/VWydNNbT/Banke-Bihari-Temple-Timings.jpg', 'बांके बिहारी मंदिर')">
+            <img src="https://i.ibb.co/VWydNNbT/Banke-Bihari-Temple-Timings.jpg" alt="बांके बिहारी मंदिर" class="religious-img">
+            <h3>बांके बिहारी मंदिर</h3>
+            <p>वृंदावन</p>
+          </div>
+
+          <!-- Box 9 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/60kHxKgs/lv-0-20260814114655.jpg', 'रंगजी मंदिर')">
+            <img src="https://i.ibb.co/60kHxKgs/lv-0-20260814114655.jpg" alt="रंगजी मंदिर" class="religious-img">
+            <h3>रंगजी मंदिर</h3>
+            <p>वृंदावन</p>
+          </div>
+
+          <!-- Box 10 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/Qjc5YYRY/lv-0-20260814115336.jpg', 'इस्कॉन मंदिर')">
+            <img src="https://i.ibb.co/Qjc5YYRY/lv-0-20260814115336.jpg" alt="इस्कॉन मंदिर" class="religious-img">
+            <h3>इस्कॉन मंदिर</h3>
+            <p>वृंदावन</p>
+          </div>
+
+          <!-- Box 11 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/ksLVZgTP/sddefault.jpg', 'निधि वन')">
+            <img src="https://i.ibb.co/ksLVZgTP/sddefault.jpg" alt="निधि वन" class="religious-img">
+            <h3>निधि वन</h3>
+            <p>वृंदावन</p>
+          </div>
+
+          <!-- Box 12 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/HLYXXYjq/Shri-Radha-Rani-Temple.jpg', 'बरसाना')">
+            <img src="https://i.ibb.co/HLYXXYjq/Shri-Radha-Rani-Temple.jpg" alt="बरसाना" class="religious-img">
+            <h3>बरसाना</h3>
+            <p>बरसाना</p>
+          </div>
+
+          <!-- Box 13 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/wr0WS7Rm/maxresdefault.jpg', 'राधा रानी जन्म स्थान')">
+            <img src="https://i.ibb.co/wr0WS7Rm/maxresdefault.jpg" alt="राधा रानी जन्म स्थान" class="religious-img">
+            <h3>राधा रानी जन्म स्थान</h3>
+            <p>बरसाना</p>
+          </div>
+
+          <!-- Box 14 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/jPTX3P5r/file-000000002ef881f49ef4cf9dc7fc81e7.png', 'प्रेम मंदिर')">
+            <img src="https://i.ibb.co/jPTX3P5r/file-000000002ef881f49ef4cf9dc7fc81e7.png" alt="प्रेम मंदिर" class="religious-img">
+            <h3>प्रेम मंदिर</h3>
+            <p>वृंदावन</p>
+          </div>
+
+          <!-- Box 15 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/JRmfGjvB/file-00000000a20081f4a12bd41bcd9344ab.png', 'दान घाटी')">
+            <img src="https://i.ibb.co/JRmfGjvB/file-00000000a20081f4a12bd41bcd9344ab.png" alt="दान घाटी" class="religious-img">
+            <h3>दान घाटी</h3>
+            <p>गोवर्धन</p>
+          </div>
+
+          <!-- Box 16 -->
+          <div class="religious-card" onclick="openModal('https://i.ibb.co/BHft31qf/file-000000001a3882119476e97f85e6038c.png', 'कीर्ति मंदिर')">
+            <img src="https://i.ibb.co/BHft31qf/file-000000001a3882119476e97f85e6038c.png" alt="कीर्ति मंदिर" class="religious-img">
+            <h3>कीर्ति मंदिर</h3>
+            <p>बरसाना</p>
+          </div>
+
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Image Zoom Modal Popup -->
+    <div class="image-modal" id="imageModal">
+      <div class="image-modal-content">
+        <button class="image-modal-close" onclick="closeModal()">×</button>
+        <img id="modalImg" src="" alt="Zoomed View">
+      </div>
+    </div>
+
+
+    <!-- Services (What We Do) -->
+    <section class="section services" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <p>WHAT WE DO</p>
+          <h2>Our <span>Services</span></h2>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>Professional Service</h3>
+            <p>
+              Professional solutions designed around your needs.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Quality Solutions</h3>
+            <p>
+              Carefully planned solutions with attention to every detail.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Customer Support</h3>
+            <p>
+              Friendly and responsive support whenever you need it.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <p>ABOUT US</p>
+          <h2>Built With <span>Trust</span></h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-card">
+            <div class="icon">✓</div>
+            <h3>Quality</h3>
+            <p>
+              We focus on delivering reliable and quality-focused
+              solutions.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="icon">★</div>
+            <h3>Experience</h3>
+            <p>
+              Experience and attention to detail are at the heart
+              of our work.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="icon">♥</div>
+            <h3>Trust</h3>
+            <p>
+              Our priority is creating long-lasting relationships
+              with our customers.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container contact-wrapper">
+
+        <div class="contact-banner">
+          <img
+            src="https://i.ibb.co/rfGPsFQs/file-00000000a11c81faa810e3efedc275e3.png" 
+            alt="Contact Banner"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="contact-box">
+          <div>
+            <p class="small-title">GET IN TOUCH</p>
+
+            <h2>
+              Let's work
+              <span>together.</span>
+            </h2>
+
+            <p>
+              Have a question or want to know more?
+              Get in touch with us.
+            </p>
+          </div>
+
+          <a
+            href="mailto:contact@example.com"
+            class="btn primary"
+          >
+            Contact Us
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span id="year"></span> श्री जी टूर एण्ड ट्रैवल्स. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+
+      if (navMenu.classList.contains("active")) {
+        menuBtn.textContent = "✕";
+      } else {
+        menuBtn.textContent = "☰";
+      }
+    });
+
+
+    // Close menu after clicking a link
+    const navLinks = document.querySelectorAll(".nav-menu a");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+
+    // Modal Zoom Functions
+    function openModal(imgSrc, imgAlt) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      
+      modalImg.src = imgSrc;
+      modalImg.alt = imgAlt;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+    }
+
+    // Close modal when clicking outside the image container
+    window.addEventListener("click", (e) => {
+      const modal = document.getElementById("imageModal");
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+
+    // Current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+    // Smooth scroll fallback
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href");
+
+        if (targetId === "#") return;
+
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          e.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
